@@ -1,0 +1,89 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css');
+
+.gallery-block {
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+    .gallery-block .heading {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+        .gallery-block .heading h2 {
+            font-weight: bold;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+        }
+
+.gallery .item {
+    overflow: hidden;
+    margin-bottom: 0;    
+    opacity: 1;
+}
+
+    .gallery .item .gallery-img {
+        transition: 0.8s ease;
+    }
+
+    .gallery .item .info {
+        position: relative;
+        display: inline-block;
+    }
+
+    .gallery .item .description {
+        display: grid;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: #fff;
+        padding: 10px;
+        font-size: 17px;
+        line-height: 18px;
+        width: 100%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        opacity: 1;
+        color: #fff;
+        transition: 0.8s ease;
+        text-align: center;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.39));
+    }
+
+        .gallery .item .description .description-heading {
+            font-size: 1em;
+            font-weight: bold;
+        }
+
+        .gallery .item .description .description-body {
+            font-size: 0.8em;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+
+@media (min-width: 576px) {
+
+    .gallery .item .description {
+        opacity: 0;
+    }
+
+    .gallery .item a:hover .description {
+        opacity: 1;
+    }
+
+    .gallery .zoom-on-hover:hover .gallery-img {
+        transform: scale(1.3);
+        opacity: 0.7;
+    }
+}
+
+.gallery-img{
+    /* max-height: 300px; */
+    max-width: 100%;
+    max-width: -moz-available;          /* WebKit-based browsers will ignore this. */
+    max-width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    max-width: fill-available;
+    cursor: pointer;
+    /* padding: 15px !important; */
+}

@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'grandsolar-cp'`, () => {
+  it(`should have as title 'grandsolar'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('grandsolar-cp');
+    expect(app.title).toEqual('grandsolar');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('grandsolar-cp app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('grandsolar app is running!');
   });
 });
